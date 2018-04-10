@@ -11,10 +11,9 @@ project "checkout_line"
    debugdir "../../examples/checkout_line"
    files {
       "../../examples/checkout_line/**.h*",
-      "../../examples/checkout_line/**.cpp",
-      "../../examples/checkout_line/**.epp",
-      "../../examples/checkout_line/**.edl"
+      "../../examples/checkout_line/**.cpp"
    }
    includedirs { ADEVS_IncPath }
-   defines { "_CONSOLE" }
-
+   if _ACTION ~= "gmake" then
+      defines { "_CONSOLE" }
+   end
