@@ -1,9 +1,12 @@
-#include "SimControl.h"
+
+//#include "SimControl.h"
+
 #include <iostream>
 using namespace std;
 
 int main()
 {
+/*
 	try
 	{
 		SimControl control;
@@ -13,5 +16,7 @@ int main()
 	{
 		cerr << err.what() << endl;
 	}
+*/
+
 	return 0;
 }

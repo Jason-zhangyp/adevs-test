@@ -6,6 +6,10 @@ vs2017/
 gmake/
 .vscode/
 
+# vs misc files
+*.ilk
+*.pdb
+
 # lib directory
 lib/
 
@@ -18,6 +22,7 @@ lib/
 !premake*.*
 
 examples/checkout_line/checkout_line
+examples/book-code/tank/tank
 
 # Prerequisites
 *.d

@@ -30,7 +30,13 @@ project "tank"
    debugdir "../../examples/book-code/tank"
    files {
       "../../examples/book-code/tank/**.h*",
-      "../../examples/book-code/tank/**.cpp"
+      "../../examples/book-code/tank/TankPhysics.cpp",
+      "../../examples/book-code/tank/TankPhysicsEqns.cpp",
+      "../../examples/book-code/tank/InterruptHandler.cpp",
+      "../../examples/book-code/tank/PacketProcessing.cpp",
+      "../../examples/book-code/tank/Computer.cpp",
+      "../../examples/book-code/tank/Tank.cpp",
+      "../../examples/book-code/tank/main.cpp"
    }
    includedirs { ADEVS_IncPath }
    if _ACTION ~= "gmake" then
