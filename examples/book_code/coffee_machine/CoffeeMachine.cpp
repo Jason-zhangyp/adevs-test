@@ -43,8 +43,8 @@ void CoffeeMachine::delta(const Bag<IO_Type>& xb)
    // Add change that was inserted by the customer
    // and check the state of the cancel button
    for (Bag<IO_Type>::const_iterator iter = xb.begin(); iter != xb.end(); iter++) {
-      if ((*iter) == NICKEL) { n++; v += 5; }
-      else if ((*iter) == DIME) { d++; v += 10; }
+      if ((*iter) == NICKEL)       { n++; v += 5; }
+      else if ((*iter) == DIME)    { d++; v += 10; }
       else if ((*iter) == QUARTER) { q++; v += 25; }
       else if ((*iter) == CANCEL) cancel = true;
    }

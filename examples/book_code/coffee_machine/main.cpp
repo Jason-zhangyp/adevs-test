@@ -8,16 +8,15 @@ using namespace std;
 
 int main()
 {
-   // Create the model
+   // create the model
    CoffeeMachine* m = new CoffeeMachine();
-   // Create the simulator and register a listener to report changes to
-   // the model
+   // create the simulator and register a listener to report model changes
    CoffeeMachineListener* l = new CoffeeMachineListener(m);
    adevs::Simulator<IO_Type>* sim = new adevs::Simulator<IO_Type>(m);
    sim->addEventListener(l);
-   // Look for input and apply it to the simulator
+   // look for input and apply it to the simulator
    while (true) {
-      // Get a command from the user
+      // get a command from the user
       string command;
       adevs::Bag<IO_Type> input;
 //      cout << sim->getTime() << " > ";
@@ -26,7 +25,7 @@ int main()
       if (command == "quit") break;
       // Otherwise process the input string
       for (int i = 0; i < command.length(); i++) {
-         if (command[i] == 'q') input.insert(QUARTER);
+         if (command[i] == 'q')      input.insert(QUARTER);
          else if (command[i] == 'd') input.insert(DIME);
          else if (command[i] == 'n') input.insert(NICKEL);
          else if (command[i] == 'c') input.insert(CANCEL);
@@ -39,8 +38,9 @@ int main()
    // Report final profit
    cout << m->getInventoryValue() << " cents in the inventory\n";
    // Clean up and exit
-   delete sim; delete l; delete m;
+   delete sim;
+   delete l;
+   delete m;
    return 0;
 }
-
 

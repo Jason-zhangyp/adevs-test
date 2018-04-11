@@ -1,15 +1,15 @@
-#ifndef _CoffeeMachine_h_
-#define _CoffeeMachine_h_
+
+#ifndef __CoffeeMachine_H__
+#define __CoffeeMachine_H__
 
 #include "adevs/adevs.h"
 
-// Input and output values
+// input and output values
 typedef enum {
   NICKEL, DIME, QUARTER,
   CANCEL, WAIT, COFFEE, NOTHING
 } IO_Type;
 
-// Definition of the coffee machine
 class CoffeeMachine: public adevs::Atomic<IO_Type>
 {
 public:
