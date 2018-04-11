@@ -21,8 +21,11 @@ lib/
 # keep premake
 !premake*.*
 
+# devs examples
 examples/checkout_line/checkout_line
-examples/book-code/tank/tank
+# book_code
+examples/book_code/coffee_machine/coffee_machine
+examples/book_code/tank/tank
 
 # Prerequisites
 *.d
